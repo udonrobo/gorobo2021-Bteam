@@ -1,0 +1,33 @@
+#pragma once
+void cal_omuni(int move_X, int move_Y, int move_turn, int turn_Gyro);
+void cal_Servo(byte cal_kakudo);
+void cal_syoukou(byte move_Motor);
+void move_zyouge(byte stopbotun);
+void Gyro_cal(byte turning, byte stop_Gyro, byte Gyro_reset);
+void cal_nae(byte zyouge, byte kankaku, byte oshidasi, byte kaisyuu);
+void cange_color(byte color);
+void color_cange_controller(byte color);
+
+byte Motor_power_omuni_1() ;
+byte Motor_power_omuni_2() ;
+byte Motor_power_omuni_3() ;
+byte Motor_power_omuni_4() ;
+byte Motor_power_omuni_Send_muki() ;
+byte Servo_kakudo();
+byte Motor_power_shoukou();
+byte Motor_muki_shoukou();
+byte omuni_power1_zyouge();
+byte omuni_power2_zyouge();
+byte omuni_power3_zyouge();
+byte omuni_power4_zyouge();
+byte omuni_muki_zyouge();
+byte airsirinder_zyouge();
+int Gyro_power();
+byte reset_move();
+byte Motor_power_nae_zyouge_return();
+byte Motor_power_nae_zengo_return();
+byte Motor_power_kankaku_return();
+byte Motor_muki_return();
+byte color1_return();
+byte color2_return();
+byte color3_return();

@@ -8,6 +8,8 @@ LoopCycleController loopCtrl(10000);
 //苗木の押出、出きった方が6、引っ込んだほうが7
 //間隔8,9
 //段差越え、車体の左10、右11、エアシリンダーの前12、後13
+const int switch_front_left_body=10;
+const int switch_front_right_body=11;
 
 byte Motor_power_omuni_Get[3];
 byte Syoukou_Get;
@@ -63,9 +65,9 @@ void loop() {
   Motor_power_omuni_Get[1] = controller_left_Y();//移動のY座標(左スティックY)
   Motor_power_omuni_Get[2] = controller_right_X();//旋回(右スティックX)
 
-  //if (digitalRead(switch_front_left_body) == LOW || digitalRead(switch_front_right_body) == LOW) {
-  //  a = 1;//スイッチが押された=段差にぶつかったとき
-  //}
+  if (digitalRead(switch_front_left_body) == LOW || digitalRead(switch_front_right_body) == LOW) {
+    a = 1;//スイッチが押された=段差にぶつかったとき
+  }
   toggle_R1(syoukou_Get);
   toggle_R2(naekaisyuu_Get);
   toggle_L1(nae_oshidasi_Get);
